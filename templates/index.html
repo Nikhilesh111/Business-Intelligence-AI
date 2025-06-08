@@ -1,0 +1,923 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Vendor Chatbot</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding: 50px;">
+    <h1>Vendor Contract Checker</h1>
+
+    <form method="POST">
+        <input type="text" name="vendor" placeholder="Enter vendor name..." required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        {% if result.error %}
+            <p style="color:red;">{{ result.error }}</p>
+        {% else %}
+            <h3>Vendor: {{ result.vendor }}</h3>
+            <p><strong>PO Number:</strong> {{ result.po }}</p>
+            <p><strong>Quantity:</strong> {{ result.quantity }}</p>
+            <p><strong>Delay:</strong> {{ result.delay }}</p>
+            <p><strong>Revenue:</strong> {{ result.revenue }}</p>
+            <h2 style="color:{{ 'green' if result['status'] == 'Renew' else 'red'}};" >Decision: {{ result['status'] }} the Contract</h2>
+        {% endif %}
+    {% endif %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Vendor GPT-2 Chatbot</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding: 50px;">
+    <h1>Vendor GPT-2 Chatbot</h1>
+
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Ask about a vendor..." size="50" required>
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if response %}
+        <div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; max-width: 600px; margin-left:auto; margin-right:auto;">
+            <strong>AI Response:</strong>
+            <p>{{ response }}</p>
+        </div>
+    {% endif %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Simple GPT-2 Chatbot</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding: 50px;">
+    <h1>Simple GPT-2 Chatbot</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Ask something..." size="50" required>
+        <button type="submit">Ask</button>
+    </form>
+    {% if response %}
+    <div style="margin-top: 20px; max-width: 600px; margin-left:auto; margin-right:auto; border:1px solid #ccc; padding:10px;">
+        <strong>AI says:</strong>
+        <p>{{ response }}</p>
+    </div>
+    {% endif %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Contract Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 30px;
+        }
+        .box {
+            display: inline-block;
+            text-align: left;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vendor Contract Decision Assistant</h1>
+
+    <form method="POST">
+        <input type="text" name="vendor" placeholder="Enter vendor name (e.g. hindalco)" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            {% if result.error %}
+                <p style="color: red;">{{ result.error }}</p>
+            {% else %}
+                <div class="box">
+                    <p><strong>Vendor:</strong> {{ result.vendor }}</p>
+                    <p><strong>PO Number:</strong> {{ result.po }}</p>
+                    <p><strong>Quantity:</strong> {{ result.qty }}</p>
+                    <p><strong>Delay:</strong> {{ result.delay }}</p>
+                    <p><strong>Revenue:</strong> {{ result.revenue }}</p>
+                    <h3>{{ result.decision }}</h3>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Vendor Contract Recommendation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        label { display: block; margin-top: 15px; }
+        input[type=text], input[type=number] {
+            width: 300px; padding: 8px; margin-top: 5px;
+        }
+        input[type=submit] {
+            margin-top: 20px; padding: 10px 20px;
+        }
+        .result { margin-top: 30px; font-size: 1.2em; color: #333; }
+    </style>
+</head>
+<body>
+    <h2>📦 Vendor Contract Evaluation – AI Recommendation</h2>
+    <form method="POST">
+        <label for="vendor">Vendor Name:</label>
+        <input type="text" name="vendor" required>
+
+        <label for="accuracy">Delivery Accuracy (%):</label>
+        <input type="number" name="accuracy" step="0.1" required>
+
+        <label for="delay">Average Delay (days):</label>
+        <input type="number" name="delay" step="1" required>
+
+        <label for="revenue">Revenue (₹):</label>
+        <input type="number" name="revenue" step="1000" required>
+
+        <input type="submit" value="Get Recommendation">
+    </form>
+
+    {% if results %}
+        <div class="result">
+            <h3>📊 Result:</h3>
+            <ul>
+                {% for r in results %}
+                    <li>{{ r }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
+<html>
+<head>
+    <title>Vendor Evaluation</title>
+</head>
+<body>
+    <h1>Contract Evaluation Assistant</h1>
+    <form method="post">
+        <label for="query">Ask a question (e.g., Do we need to cancel contract for Hindalco?):</label><br>
+        <input type="text" name="query" size="60" required>
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    {% for result in results %}
+        {% if result.error %}
+            <p style="color:red">{{ result.error }}</p>
+        {% else %}
+            <h3>Evaluation Result for {{ result.vendor }}</h3>
+            <ul>
+                <li><strong>PO Number:</strong> {{ result.po_number }}</li>
+                <li><strong>GR Date:</strong> {{ result.gr_date }}</li>
+                <li><strong>PR Date:</strong> {{ result.pr_date }}</li>
+                <li><strong>Delivery Delay:</strong> {{ result.delay }} days</li>
+                <li><strong>Delivery Status:</strong> {{ result.delivery_status }}</li>
+                <li><strong>Revenue:</strong> {{ result.revenue }}</li>
+                <li><strong>Revenue Impact:</strong> {{ result.revenue_impact }}</li>
+            </ul>
+            <p style="font-size:1.2em"><strong>{{ result.recommendation }}</strong></p>
+            <hr>
+        {% endif %}
+    {% endfor %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Contract Evaluation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+            padding-top: 50px;
+        }
+        .dashboard-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .badge-high {
+            background-color: #28a745;
+        }
+        .badge-low {
+            background-color: #dc3545;
+        }
+        .recommendation {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-4">📊 Vendor Contract Evaluation Dashboard</h1>
+
+    <form method="POST" class="card p-4 shadow-sm">
+        <label for="query" class="form-label">Ask your question:</label>
+        <input type="text" name="query" class="form-control mb-3" placeholder="e.g., Do we need to cancel contract for Hindalco?" required>
+        <button type="submit" class="btn btn-primary w-100">🔍 Search</button>
+    </form>
+
+    {% for result in results %}
+        {% if result.error %}
+            <div class="alert alert-danger mt-4">{{ result.error }}</div>
+        {% else %}
+            <div class="dashboard-card">
+                <h4>{{ result.vendor }} - Contract Evaluation</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <p><strong>PO Number:</strong> {{ result.po_number }}</p>
+                        <p><strong>GR Date:</strong> {{ result.gr_date }}</p>
+                        <p><strong>PR Date:</strong> {{ result.pr_date }}</p>
+                        <p><strong>Delivery Delay:</strong> {{ result.delay }} day(s)</p>
+                        <p><strong>Delivery Status:</strong>
+                            {% if result.delivery_status == 'Late' %}
+                                <span class="badge bg-warning text-dark">Late</span>
+                            {% else %}
+                                <span class="badge bg-success">On Time</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Revenue:</strong> {{ result.revenue }}</p>
+                        <p><strong>Revenue Impact:</strong>
+                            {% if result.revenue_impact == 'High' %}
+                                <span class="badge badge-high">High</span>
+                            {% else %}
+                                <span class="badge badge-low">Low</span>
+                            {% endif %}
+                        </p>
+                        <p class="recommendation">
+                            {{ result.recommendation }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+</div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vendor Contract Evaluation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f4f6f9;
+            padding-top: 50px;
+        }
+        .dashboard-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .badge-high {
+            background-color: #28a745;
+        }
+        .badge-low {
+            background-color: #dc3545;
+        }
+        .recommendation {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-4">📊 Vendor Contract Evaluation Dashboard</h1>
+
+    <form method="POST" class="card p-4 shadow-sm">
+        <label for="query" class="form-label">Ask your question:</label>
+        <input
+            type="text"
+            name="query"
+            class="form-control mb-3"
+            placeholder="e.g., Do we need to cancel contract for Hindalco?"
+            required
+        />
+        <button type="submit" class="btn btn-primary w-100">🔍 Search</button>
+    </form>
+
+    {% for result in results %}
+        {% if result.error %}
+            <div class="alert alert-danger mt-4">{{ result.error }}</div>
+        {% else %}
+            <div class="dashboard-card">
+                <h4>{{ result.vendor }} - Contract Evaluation</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <p><strong>PO Number:</strong> {{ result.po_number }}</p>
+                        <p><strong>GR Date:</strong> {{ result.gr_date }}</p>
+                        <p><strong>PR Date:</strong> {{ result.pr_date }}</p>
+                        <p><strong>Delivery Delay:</strong> {{ result.delay }} day(s)</p>
+                        <p>
+                            <strong>Delivery Status:</strong>
+                            {% if result.delivery_status == 'Late' %}
+                                <span class="badge bg-warning text-dark">Late</span>
+                            {% else %}
+                                <span class="badge bg-success">On Time</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Revenue:</strong> {{ result.revenue }}</p>
+                        <p>
+                            <strong>Revenue Impact:</strong>
+                            {% if result.revenue_impact == 'High' %}
+                                <span class="badge badge-high">High</span>
+                            {% else %}
+                                <span class="badge badge-low">Low</span>
+                            {% endif %}
+                        </p>
+                        <p class="recommendation">
+                            {{ result.recommendation }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    {% if results and not results[0].error %}
+    <div class="container mt-5">
+        <h3 class="text-center">📈 Summary Charts</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <canvas id="deliveryChart"></canvas>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% if results and not results[0].error %}
+<script>
+    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+    new Chart(revenueCtx, {
+        type: 'pie',
+        data: {
+            labels: ['High Revenue Impact', 'Low Revenue Impact'],
+            datasets: [{
+                data: [{{ summary.revenue_high }}, {{ summary.revenue_low }}],
+                backgroundColor: ['#28a745', '#dc3545']
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Revenue Impact (Threshold: ₹500,000)'
+                }
+            }
+        }
+    });
+
+    const deliveryCtx = document.getElementById('deliveryChart').getContext('2d');
+    new Chart(deliveryCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Late Delivery', 'On Time', 'Early Delivery'],
+            datasets: [{
+                data: [{{ summary.delivery_late }}, {{ summary.delivery_on_time }}, {{ summary.delivery_early }}],
+                backgroundColor: ['#ffc107', '#17a2b8', '#6f42c1']
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Delivery Performance'
+                }
+            }
+        }
+    });
+</script>
+{% endif %}
+
+</body>
+</html>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Contract Evaluation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+            padding-top: 50px;
+        }
+        .dashboard-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recommendation {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-4">📊 Vendor Contract Evaluation Dashboard</h1>
+
+    <form method="POST" class="card p-4 shadow-sm">
+        <label for="query" class="form-label">Ask your question:</label>
+        <input type="text" name="query" class="form-control mb-3" placeholder="e.g., Do we need to cancel contract for Hindalco?" required>
+        <button type="submit" class="btn btn-primary w-100">🔍 Search</button>
+    </form>
+
+    {% for result in results %}
+        {% if result.error %}
+            <div class="alert alert-danger mt-4">{{ result.error }}</div>
+        {% else %}
+            <div class="dashboard-card">
+                <h4>{{ result.vendor }} - Contract Evaluation</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <p><strong>PO Number:</strong> {{ result.po_number }}</p>
+                        <p><strong>GR Date:</strong> {{ result.gr_date }}</p>
+                        <p><strong>PO Date:</strong> {{ result.pr_date }}</p>
+                        <p><strong>Delivery Delay:</strong> {{ result.delay }} day(s)</p>
+                        <p><strong>Delivery Status:</strong>
+                            {% if result.delivery_status == 'Late' %}
+                                <span class="badge bg-warning text-dark">Late</span>
+                            {% else %}
+                                <span class="badge bg-success">On Time</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Quantity Ordered:</strong> {{ result.quantity_ordered }} units</p>
+                        <p><strong>Quantity Received:</strong> {{ result.quantity_received }} units</p>
+                        <p class="recommendation">{{ result.recommendation }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Contract Evaluation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f4f6f9;
+            padding-top: 50px;
+        }
+        .dashboard-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recommendation {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-4">📊 Vendor Contract Evaluation Dashboard</h1>
+
+    <form method="POST" class="card p-4 shadow-sm">
+        <label for="query" class="form-label">Ask your question:</label>
+        <input type="text" name="query" class="form-control mb-3" placeholder="e.g., Give me contract Evaluation details for Hindalco?" required>
+        <button type="submit" class="btn btn-primary w-100">🔍 Search</button>
+    </form>
+
+    {% for result in results %}
+        {% if result.error %}
+            <div class="alert alert-danger mt-4">{{ result.error }}</div>
+        {% else %}
+            <div class="dashboard-card">
+                <h4>{{ result.vendor }} - Contract Evaluation</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <p><strong>PO Number:</strong> {{ result.po_number }}</p>
+                        <p><strong>GR Date:</strong> {{ result.gr_date }}</p>
+                        <p><strong>PO Date:</strong> {{ result.pr_date }}</p>
+                        <p><strong>Delivery Delay:</strong> {{ result.delay }} day(s)</p>
+                        <p><strong>Delivery Status:</strong>
+                            {% if result.delivery_status == 'Late' %}
+                                <span class="badge bg-danger">Late</span>
+                            {% else %}
+                                <span class="badge bg-success">On Time</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Quantity Ordered:</strong> {{ result.quantity_ordered }} units</p>
+                        <p><strong>Quantity Received:</strong> {{ result.quantity_received }} units</p>
+                        <p class="recommendation">
+                            {{ result.recommendation }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Static Bar Chart -->
+    <div class="dashboard-card mt-4">
+        <h5 class="text-center">Delivery Status Summary (Static)</h5>
+        <canvas id="deliveryChart" height="100"></canvas>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('deliveryChart').getContext('2d');
+    const deliveryChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['On Time', 'Late'],
+            datasets: [{
+                data: [1, 1], // Static data
+                backgroundColor: ['#28a745', '#dc3545'], // Green and Red
+                hoverBackgroundColor: ['#28a745', '#dc3545']
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false // Hide legend
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.label; // Only show "On Time" or "Late"
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        display: false // Hide x-axis labels
+                    },
+                    grid: {
+                        display: false // Hide grid lines for x-axis
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    precision: 0,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>
